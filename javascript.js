@@ -1,11 +1,10 @@
 //rock-paper-scissors
-let x = Math.floor((Math.random()*3)+1);
-//alert(x);
+let getComputerChoice = Math.floor((Math.random()*3)+1);
 
-if (x == 1) {
+if (getComputerChoice == 1) {
     alert ("rock");
 }
-else if (x== 2) {
+else if (getComputerChoice== 2) {
     alert ("paper");
 }
 else {
