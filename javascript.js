@@ -2,12 +2,18 @@
 let getComputerChoice = Math.floor((Math.random()*3)+1);
 
 if (getComputerChoice == 1) {
-    alert ("rock");
+    const computerSelection = "rock";
+    console.log (computerSelection);
 }
 else if (getComputerChoice== 2) {
-    alert ("paper");
+    const computerSelection = "paper";
+    console.log (computerSelection);
 }
 else {
-    alert ("scissors");
+    const computerSelection = "scissors";
+    console.log (computerSelection);
 }
+
+
+
 
