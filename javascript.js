@@ -1,8 +1,8 @@
 //rock-paper-scissors
 let getComputerChoice = Math.floor((Math.random()*3)+1);
-let userSelection = prompt ();
+let userInput = prompt();
+userSelection = userInput.toLowerCase();
 console.log ("user: " + userSelection);
-
 
 if (getComputerChoice == 1) {
     const computerSelection = "rock";
