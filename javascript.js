@@ -5,10 +5,13 @@ let lose=0;
 
 
 
-for ( let i=1; i<=5; i++){
-    console.log ("------Round " + i + "------");
+
+
+let play = function (val) {
+//for ( let i=1; i<=5; i++){
+  //  console.log ("------Round " + i + "------");
     let getComputerChoice = Math.floor((Math.random()*3)+1);
-    let userInput = prompt();
+    let userInput = val;
     userSelection = userInput.toLowerCase();
     console.log ("user: " + userSelection);
     
@@ -66,5 +69,6 @@ for ( let i=1; i<=5; i++){
     }
     console.log("Draw: " + draw + ". Win: " + win + ". Lose: " + lose + ".");
 
-}
+//}
 
+};
