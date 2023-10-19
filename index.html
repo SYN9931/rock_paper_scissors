@@ -8,15 +8,18 @@
     <script src="javascript.js" async></script>
 </head>
 <body>
-
+    <h3>Choose your weapon: </h3>
     <form id="optionsForm" action="">
 
         <input type="button" id="rock" value="rock" onclick="play('rock')" />
         <input type="button" id="paper" value="paper" onclick="play('paper')" />
         <input type="button" id="scissors" value="scissors" onclick="play('scissors')" />
         
-        </form>
-    
+    </form>
+    <p id="winScore">Player score = 0</p>
+    <p id="loseScore">Computer score = 0</p>
+    <p id="drawScore">Draw = 0</p>
+    <p id="result"> </p>
     
 </body>
 </html>

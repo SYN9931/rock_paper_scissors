@@ -8,16 +8,16 @@ let lose=0;
 
 
 let play = function (val) {
-//for ( let i=1; i<=5; i++){
+if ( win <5 && lose<5){
   //  console.log ("------Round " + i + "------");
-    let getComputerChoice = Math.floor((Math.random()*3)+1);
+    let getComputerChoice = Math.floor(Math.random()*3)+1;
     let userInput = val;
     userSelection = userInput.toLowerCase();
     console.log ("user: " + userSelection);
     
 
     if (userSelection == "rock" || userSelection == "paper" || userSelection == "scissors") {
-        if (getComputerChoice == 1) {
+        if (getComputerChoice === 1) {
             const computerSelection = "paper";
             console.log ("computer: " + computerSelection);
 
@@ -32,9 +32,13 @@ let play = function (val) {
                 lose = lose + 1;
             }
         }
-        else if (getComputerChoice== 2) {
+        else if (getComputerChoice=== 2) {
             const computerSelection = "scissors";
             console.log ("computer: " + computerSelection);
+            //let div = document.createElement('div');
+            //div.id = 'computerSelection';
+            //div.innerHTML = '<h3>The Computer chose: Scissors</h3>';
+            //document.body.appendChild(div);
 
             if (userSelection == "scissors") {
                 console.log("both of you picked scissors. It's a draw!");
@@ -50,6 +54,10 @@ let play = function (val) {
         else {
             const computerSelection = "rock";
             console.log ("computer: " + computerSelection);
+            //let div = document.createElement('div');
+            //div.id = 'computerSelection';
+            //div.innerHTML = '<h3>The Computer chose: Rock</h3>';
+            //document.body.appendChild(div);
 
 
             if (userSelection == "rock") {
@@ -67,8 +75,26 @@ let play = function (val) {
     } else {
         console.log("invalid input. Please try again.");
     }
-    console.log("Draw: " + draw + ". Win: " + win + ". Lose: " + lose + ".");
+    console.log("Draw: " + draw + ". Win: " + win + ". Lose: " + lose + ".");   
+    //const computerSelect = document.getElementById("computerSelect");
+    const  winScore = document.getElementById("winScore");
+    const loseScore = document.getElementById("loseScore");
+    const drawScore = document.getElementById("drawScore");
 
-//}
+    //computerSelect.textContent = `Computer selected : ${computerSelect}`;
+    winScore.textContent = `Player score = ${win}`;
+    loseScore.textContent = `Computer score = ${lose}`;
+    drawScore.textContent = `Draw = ${draw}`;
+
+    
+
+}else if ( win === 5){
+    const result = document.getElementById("result");
+    result.textContent = 'player wins!'
+} else {
+    const result = document.getElementById("result");
+    result.textContent = 'computer wins!'
+}
 
 };
+
