@@ -8,7 +8,7 @@ let lose=0;
 
 
 let play = function (val) {
-if ( win <5 && lose<5){
+//if ( win <5 && lose<5){
   //get random number between 1,2 or 3 for computer
     let getComputerChoice = (Math.floor(Math.random()*3))+1;
     console.log("randomizer value: " + getComputerChoice);
@@ -27,13 +27,22 @@ if ( win <5 && lose<5){
             } else if (userSelection == "rock") {
                 console.log(userSelection + " beaten by " + computerSelection + ". You lose!" );
                 lose = lose + 1;
+                    if (lose ===5){
+                        const result = document.getElementById("result");
+                        result.textContent = 'computer wins!'
+                    }
             } else {
                 console.log (userSelection + " beats " + computerSelection + ". You won!" );
                 win = win + 1;
+                    if (win ===5){
+                        const result = document.getElementById("result");
+                        result.textContent = 'player wins!'
+                    }
+                
             }
-        }
+        } 
         else if (getComputerChoice=== 2) {
-            const computerSelection = "scissors";
+            const  computerSelection = "scissors";
             console.log ("computer: " + computerSelection);
 
             if (userSelection == "scissors") {
@@ -42,13 +51,21 @@ if ( win <5 && lose<5){
             } else if (userSelection == "rock") {
                 console.log(userSelection + " beats " + computerSelection + ". You won!" );
                 win = win + 1;
+                    if (win ===5){
+                        const result = document.getElementById("result");
+                        result.textContent = 'player wins!'
+                    }
             } else {
                 console.log (userSelection + " beaten by " + computerSelection + ". You lose!" );
                 lose = lose + 1;
+                    if (lose === 5){
+                        const result = document.getElementById("result");
+                        result.textContent = 'computer wins!'
+                    }
             }
         }
         else {
-            const computerSelection = "rock";
+            const  computerSelection = "rock";
             console.log ("computer: " + computerSelection);
 
             if (userSelection == "rock") {
@@ -57,9 +74,18 @@ if ( win <5 && lose<5){
             } else if (userSelection == "paper") {
                 console.log(userSelection + " beats " + computerSelection + ". You won!" );
                 win = win + 1;
+                    if (win ===5) {
+                        const result = document.getElementById("result");
+                        result.textContent = 'player wins!'
+                }
+                
             } else {
                 console.log (userSelection + " beaten by " + computerSelection + ". You lose!" );
                 lose = lose + 1;
+                    if (lose===5){
+                        const result = document.getElementById("result");
+                        result.textContent = 'computer wins!'
+                    }
             }
         }
 
@@ -69,19 +95,12 @@ if ( win <5 && lose<5){
     const loseScore = document.getElementById("loseScore");
     const drawScore = document.getElementById("drawScore");
 
+    
     winScore.textContent = `Player score = ${win}`;
     loseScore.textContent = `Computer score = ${lose}`;
     drawScore.textContent = `Draw = ${draw}`;
 
     
-
-}else if ( win === 5){
-    const result = document.getElementById("result");
-    result.textContent = 'player wins!'
-} else {
-    const result = document.getElementById("result");
-    result.textContent = 'computer wins!'
-}
 
 };
 
