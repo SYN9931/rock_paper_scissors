@@ -8,7 +8,7 @@ let lose=0;
 
 
 let play = function (val) {
-//if ( win <5 && lose<5){
+if ( win <5 && lose<5){
   //get random number between 1,2 or 3 for computer
     let getComputerChoice = (Math.floor(Math.random()*3))+1;
     console.log("randomizer value: " + getComputerChoice);
@@ -101,6 +101,6 @@ let play = function (val) {
     drawScore.textContent = `Draw = ${draw}`;
 
     
-
+}
 };
 
