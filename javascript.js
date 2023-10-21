@@ -20,6 +20,8 @@ if ( win <5 && lose<5){
         if (getComputerChoice === 1) {
             const computerSelection = "paper";
             console.log ("computer: " + computerSelection);
+            const computerWeapon = document.getElementById("computerWeapon");
+            computerWeapon.textContent = "Computer chose Paper."
 
             if (userSelection == "paper") {
                 console.log("both of you picked paper. It's a draw!");
@@ -29,14 +31,14 @@ if ( win <5 && lose<5){
                 lose = lose + 1;
                     if (lose ===5){
                         const result = document.getElementById("result");
-                        result.textContent = 'computer wins!'
+                        result.textContent = 'Computer wins!'
                     }
             } else {
                 console.log (userSelection + " beats " + computerSelection + ". You won!" );
                 win = win + 1;
                     if (win ===5){
                         const result = document.getElementById("result");
-                        result.textContent = 'player wins!'
+                        result.textContent = 'Player wins!'
                     }
                 
             }
@@ -44,6 +46,8 @@ if ( win <5 && lose<5){
         else if (getComputerChoice=== 2) {
             const  computerSelection = "scissors";
             console.log ("computer: " + computerSelection);
+            const computerWeapon = document.getElementById("computerWeapon");
+            computerWeapon.textContent = "Computer chose Scissors."
 
             if (userSelection == "scissors") {
                 console.log("both of you picked scissors. It's a draw!");
@@ -53,20 +57,22 @@ if ( win <5 && lose<5){
                 win = win + 1;
                     if (win ===5){
                         const result = document.getElementById("result");
-                        result.textContent = 'player wins!'
+                        result.textContent = 'Player wins!'
                     }
             } else {
                 console.log (userSelection + " beaten by " + computerSelection + ". You lose!" );
                 lose = lose + 1;
                     if (lose === 5){
                         const result = document.getElementById("result");
-                        result.textContent = 'computer wins!'
+                        result.textContent = 'Computer wins!'
                     }
             }
         }
         else {
             const  computerSelection = "rock";
             console.log ("computer: " + computerSelection);
+            const computerWeapon = document.getElementById("computerWeapon");
+            computerWeapon.textContent = "Computer chose Rock."
 
             if (userSelection == "rock") {
                 console.log("both of you picked rock. It's a draw!");
@@ -76,7 +82,7 @@ if ( win <5 && lose<5){
                 win = win + 1;
                     if (win ===5) {
                         const result = document.getElementById("result");
-                        result.textContent = 'player wins!'
+                        result.textContent = 'Player wins!'
                 }
                 
             } else {
@@ -84,7 +90,7 @@ if ( win <5 && lose<5){
                 lose = lose + 1;
                     if (lose===5){
                         const result = document.getElementById("result");
-                        result.textContent = 'computer wins!'
+                        result.textContent = 'Computer wins!'
                     }
             }
         }
